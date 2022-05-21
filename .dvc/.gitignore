@@ -1,3 +1,5 @@
 /config.local
-/tmp
+/tmp/*
 /cache
+
+!/tmp/*.gpg
