@@ -1,0 +1,18 @@
+train:
+  train: "train"
+  test: "test"
+
+  epoch: 1
+  train_size: 128
+  batch_size: 32
+  
+  train_num_steps: 160
+  eval_num_steps: 4
+
+  base_lr: 1e-3
+  finetune_lr: 7e-6
+  finetune_freeze_pct: 0.9
+
+  saving_dir: "model/tmp"
+
+  seed: 20220521

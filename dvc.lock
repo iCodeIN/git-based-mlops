@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python pipeline/src/train.py data model
+    deps:
+    - path: pipeline/src/train.py
+      md5: a19d6448a03d8e068655a3cbfc3bfe80
+      size: 4579
+    params:
+      params.yaml:
+        train.base_lr: 0.001
+        train.batch_size: 32
+        train.epoch: 1
+        train.finetune_freeze_pct: 0.9
+        train.finetune_lr: 7e-06
+        train.seed: 20220521
+        train.train_size: 128
+    outs:
+    - path: model
+      md5: 395f92cfa6e5c6a6fa8170618da12d48.dir
+      size: 162358258
+      nfiles: 4

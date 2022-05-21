@@ -1,0 +1,15 @@
+stages:
+  train:
+    cmd: python pipeline/src/train.py data model
+    deps:
+    - pipeline/src/train.py
+    params:
+    - train.base_lr
+    - train.batch_size
+    - train.epoch
+    - train.finetune_freeze_pct
+    - train.finetune_lr
+    - train.seed
+    - train.train_size
+    outs:
+    - model
